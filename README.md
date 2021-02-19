@@ -1,3 +1,9 @@
+This is a fork of https://github.com/GoogleChrome/dialog-polyfill. Because of the polyfill nature, I'm fairly sure (but not certain) the feature I wanted would not be added (or merged back - and rightly so) as it would go beyond the polyfill it was designed to be.
+
+Essentially I wanted to transform an ordinary `<div>` into a dialog so I could avoid the `<dialog>` stacking context and have a element with a `z-index` greater than the dialog show on top of it (think custom select/context menu or other dropdown).
+
+---
+
 dialog-polyfill.js is a polyfill for `<dialog>` and `<form method="dialog">`.
 Check out [some demos](https://googlechrome.github.io/dialog-polyfill/)!
 
