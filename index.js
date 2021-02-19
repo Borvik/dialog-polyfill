@@ -62,7 +62,7 @@ function createsStackingContext(el) {
  */
 function findNearestDialog(el) {
   while (el) {
-    if (el.localName === 'dialog') {
+    if (el.localName === 'dialog' || el.classList.contains('dialog')) {
       return /** @type {HTMLDialogElement} */ (el);
     }
     if (el.parentElement) {
@@ -533,7 +533,7 @@ dialogPolyfill.forceRegisterDialog = function(element) {
     console.warn('This browser already supports <dialog>, the polyfill ' +
         'may not work correctly', element);
   }
-  if (element.localName !== 'dialog') {
+  if (element.localName !== 'dialog' && !element.classList.contains('dialog')) {
     throw new Error('Failed to register dialog: The element is not a dialog.');
   }
   new dialogPolyfillInfo(/** @type {!HTMLDialogElement} */ (element));
@@ -585,10 +585,10 @@ dialogPolyfill.DialogManager = function() {
         for (var i = 0, c; c = rec.removedNodes[i]; ++i) {
           if (!(c instanceof Element)) {
             continue;
-          } else if (c.localName === 'dialog') {
+          } else if (c.localName === 'dialog' || c.classList.contains('dialog')) {
             removed.push(c);
           }
-          removed = removed.concat(c.querySelectorAll('dialog'));
+          removed = removed.concat(c.querySelectorAll('dialog, .dialog'));
         }
       });
       removed.length && checkDOM(removed);

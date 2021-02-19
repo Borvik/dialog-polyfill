@@ -1,16 +1,16 @@
 {
-  "name": "dialog-polyfill",
+  "name": "@borvik/dialog-polyfill",
   "version": "0.5.6",
   "description": "Polyfill for the dialog element",
   "main": "dist/dialog-polyfill.js",
   "module": "dist/dialog-polyfill.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoogleChrome/dialog-polyfill.git"
+    "url": "https://github.com/Borvik/dialog-polyfill.git"
   },
   "author": "The Chromium Authors",
   "license": "BSD",
-  "homepage": "https://github.com/GoogleChrome/dialog-polyfill",
+  "homepage": "https://github.com/Borvik/dialog-polyfill",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.0.2",

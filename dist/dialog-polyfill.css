@@ -1,4 +1,9 @@
-dialog {
+.dialog {
+  /** for class based dialog only, not dialog element - we don't want to cause issues for browsers that support it */
+  z-index: 1050;
+}
+
+dialog, .dialog {
   position: absolute;
   left: 0; right: 0;
   width: -moz-fit-content;
@@ -15,11 +20,11 @@ dialog {
   display: block;
 }
 
-dialog:not([open]) {
+dialog:not([open]), .dialog:not([open]) {
   display: none;
 }
 
-dialog + .backdrop {
+dialog + .backdrop, .dialog + .backdrop {
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
   background: rgba(0,0,0,0.1);
@@ -30,7 +35,7 @@ dialog + .backdrop {
   top: 0; right: 0; bottom: 0; left: 0;
 }
 
-dialog.fixed {
+dialog.fixed, .dialog.fixed {
   position: fixed;
   top: 50%;
   transform: translate(0, -50%);
