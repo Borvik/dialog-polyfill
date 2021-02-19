@@ -1,8 +1,3 @@
-.dialog {
-  /** for class based dialog only, not dialog element - we don't want to cause issues for browsers that support it */
-  z-index: 1050;
-}
-
 dialog, .dialog {
   position: absolute;
   left: 0; right: 0;

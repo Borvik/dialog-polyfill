@@ -1,6 +1,6 @@
 {
   "name": "@borvik/dialog-polyfill",
-  "version": "0.5.6",
+  "version": "0.5.7-beta.0",
   "description": "Polyfill for the dialog element",
   "main": "dist/dialog-polyfill.js",
   "module": "dist/dialog-polyfill.esm.js",
